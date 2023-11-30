@@ -149,7 +149,6 @@ body{
 .page3{
     background-color: #EBEFF5;
     position: relative;
-    z-index: -2;
     padding: 120px 0;
     .bg_r{
         width: 480px;
@@ -160,7 +159,7 @@ body{
         top: 3%;
         left: -80px;
         opacity: 25%;
-        z-index: -1;
+        z-index: 1;
     }
     .flex{
         display: flex;
@@ -168,6 +167,8 @@ body{
         align-items: center;
         margin-bottom: 160px;
         figure{
+            position: relative;
+            z-index: 2;
             width: 40%;
             p{
                 text-align: end;
@@ -209,6 +210,7 @@ body{
         padding: 18px 100px;
         white-space: nowrap;
         margin: 0 auto;
+        cursor: pointer;
         img{
             width: 55px;
             margin-left: 24px;
