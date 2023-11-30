@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요가조쿤</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <section class="page1">
+        <figure class="bg_phone"><img src="./image/phone.png" alt=""></figure>
+        <div class="ddag">
+            <p><span>요</span>가 ?</p>
+            <p><span>가</span>장 쉬워요.</p>
+            <p><span>조</span>금도 어렵지 않아요.</p>
+            <p><span>쿤</span>방 배워요.</p>
+        </div>
+        <ul class="round">
+            <li>
+                <p>
+                    국내 최고의
+                    요가 전문
+                    석박사 강사
+                </p>
+            </li>
+            <li>
+                <p>
+                    누구나 쉽고
+                    간단하게
+                    사용하는 요가
+                </p>
+            </li>
+            <li>
+                <p>
+                    혼자여도
+                    여러명이여도
+                    Ok!
+                </p>
+            </li>
+        </ul>
+        <p class="small">
+        요가조쿤은 온라인으로 하는 요가, 명상 수업입니다.
+        국내 유일무이 최고의 강사진으로 이루어진 요가조쿤
+        요가 심신치유와 더불어 영어로도 시작해보세요.
+        </p>
+        <div class="big">
+            <p>
+                <strong data-value="YOGA Home studio"="">YOGA Home studio</strong>
+                Let's do it together
+            </p>
+        </div>
+        <figure class="phone"><img src="./image/phone2.png" alt=""></figure>
+    </section>
+    <section class="page2">
+        <div class="text">
+            <p class="m">나 혼자서도? 여러명 단체도?</p>
+            <p class="b">다 되요!</p>
+            <p class="b">하면 되요!</p>
+            <p class="b">쉬워요!</p>
+        </div>
+        <div class="img"><img src="./image/page2.png" alt=""></div>
+    </section>
+    <section class="page3">
+        <div class="bg_r"></div>
+        <div class="flex">
+            <figure>
+                <img src="./image/ex.png" alt="">
+                <p>※ 실제 강사님과 회원들의 수업 영상입니다.</p>
+            </figure>
+            <div class="text">
+                <h3>요가조쿤</h3>
+                <p>
+                    우리에게 <strong>꼭 필요한</strong>,
+                    테라피 요가와 트라우마 명상을
+                    <strong>최고의 전문가와 함께하세요.</strong>
+                </p>
+            </div>
+        </div>
+        <button class="btn" type="button">
+            단체 수업 문의하기
+            <img src="./image/arrow.png" alt="">
+        </button>
+    </section>
+</body>
+<script>
+    const letters ="ABCDEFGHIJKLMNOPQTSYUVWXYZ"
+    document.querySelector("strong").onmouseover = event =>{
+        let iterations = 0;
+
+        const interval = setInterval(() => {
+           event.target.innerText = event.target.innerText.split("")
+            .map((letter, index) => {
+                if(index < iterations){
+                    return event.target.dataset.value[index];
+                }
+
+                return letters[Math.floor(Math.random() * 26)]
+            })
+            .join("");
+
+            if(iterations >= event.target.dataset.value.length){
+                clearInterval(interval);
+            } 
+
+            iterations += 1 / 3;
+        },30);
+        
+    }
+</script>
+</html>
